@@ -23,5 +23,5 @@ body {
 }
 
 ::selection {
-  @apply bg-university-500 text-white;
+  @apply bg-university-500 text-slate-50;
 }

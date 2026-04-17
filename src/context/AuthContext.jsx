@@ -26,11 +26,22 @@ const buildUserFromToken = (token) => {
     const payload = decodeTokenPayload(token);
     if (!payload) return null;
 
+    // Extraer roles de múltiples formatos posibles
+    let roles = [];
+    if (Array.isArray(payload.roles)) {
+        roles = payload.roles;
+    } else if (payload.role) {
+        roles = Array.isArray(payload.role) ? payload.role : [payload.role];
+    } else if (payload['http://schemas.microsoft.com/ws/2008/06/identity/claims/role']) {
+        const role = payload['http://schemas.microsoft.com/ws/2008/06/identity/claims/role'];
+        roles = Array.isArray(role) ? role : [role];
+    }
+
     return {
         userId: payload.sub || payload.userId || null,
-        username: payload.username || payload.name || null,
+        username: payload.unique_name || payload.username || payload.name || null,
         email: payload.email || null,
-        roles: payload.roles || payload.role || [],
+        roles,
     };
 };
 

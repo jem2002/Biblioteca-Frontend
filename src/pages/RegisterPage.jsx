@@ -91,7 +91,7 @@ export default function RegisterPage() {
                         <button
                             type="submit"
                             disabled={loading}
-                            className="flex w-full items-center justify-center rounded-full bg-university-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-university-700 disabled:cursor-not-allowed disabled:opacity-70"
+                            className="flex w-full items-center justify-center rounded-full bg-university-600 px-4 py-3 text-sm font-semibold text-slate-50 transition hover:bg-university-700 disabled:cursor-not-allowed disabled:opacity-70"
                         >
                             {loading ? <Spinner /> : 'Registrar cuenta'}
                         </button>

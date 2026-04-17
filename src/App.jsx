@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { useAuth } from './hooks/useAuth.js';
-import Navbar from './components/common/Navbar.jsx';
+import Navbar from './components/common/NavBar.jsx';
 import ProtectedRoute from './components/common/ProtectedRoute.jsx';
 import RoleGuard from './components/common/RoleGuard.jsx';
 import LoginPage from './pages/LoginPage.jsx';

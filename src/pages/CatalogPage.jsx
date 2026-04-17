@@ -17,10 +17,10 @@ export default function CatalogPage() {
         <div className="mx-auto max-w-7xl space-y-6">
             <div className="overflow-hidden rounded-[32px] border border-slate-200 bg-white shadow-sm">
                 <div className="bg-gradient-to-r from-university-600 to-sky-500 px-6 py-8 sm:px-10">
-                    <div className="max-w-3xl text-white">
-                        <p className="text-sm uppercase tracking-[0.24em] text-sky-100">Catálogo universitario</p>
-                        <h1 className="mt-3 text-4xl font-semibold leading-tight text-white">Descubre libros con una experiencia limpia y moderna</h1>
-                        <p className="mt-4 max-w-2xl text-sm text-slate-100/90">Filtra por título, autor, categoría y disponibilidad. Todas las funciones están optimizadas para una navegación rápida y minimalista.</p>
+                    <div className="max-w-3xl text-slate-50">
+                        <p className="text-sm uppercase tracking-[0.24em] text-slate-200">Catálogo universitario</p>
+                        <h1 className="mt-3 text-4xl font-semibold leading-tight text-slate-50">Descubre libros con una experiencia limpia y moderna</h1>
+                        <p className="mt-4 max-w-2xl text-sm text-slate-200/80">Filtra por título, autor, categoría y disponibilidad. Todas las funciones están optimizadas para una navegación rápida y minimalista.</p>
                     </div>
                 </div>
                 <div className="grid gap-6 border-t border-slate-200 px-6 py-6 sm:grid-cols-[1fr_0.5fr]">
@@ -91,7 +91,7 @@ export default function CatalogPage() {
                         </div>
                         <Link
                             to="/admin"
-                            className="inline-flex rounded-full bg-university-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-university-700"
+                            className="inline-flex rounded-full bg-university-600 px-5 py-3 text-sm font-semibold text-slate-50 transition hover:bg-university-700"
                         >
                             Abrir panel admin
                         </Link>

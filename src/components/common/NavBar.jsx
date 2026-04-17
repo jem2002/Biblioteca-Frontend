@@ -17,7 +17,7 @@ export default function Navbar() {
             <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-4 sm:px-6 sm:flex-row sm:items-center sm:justify-between">
                 <div className="flex items-center justify-between gap-4">
                     <Link to="/catalog" className="inline-flex items-center gap-3 text-xl font-semibold text-university-900">
-                        <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-university-600 text-sm font-bold text-white shadow-sm">
+                        <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-university-600 text-sm font-bold text-slate-50 shadow-sm">
                             B
                         </span>
                         Biblioteca U
@@ -36,7 +36,7 @@ export default function Navbar() {
 
                 <div className="flex flex-wrap items-center gap-3">
                     {!isAuthenticated ? (
-                        <Link className="rounded-full bg-university-600 px-4 py-2 text-sm text-white transition hover:bg-university-700" to="/login">
+                        <Link className="rounded-full bg-university-600 px-4 py-2 text-sm text-slate-50 transition hover:bg-university-700" to="/login">
                             Iniciar sesión
                         </Link>
                     ) : (

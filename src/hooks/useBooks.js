@@ -13,13 +13,13 @@ export const useBooks = (initialFilters = {}) => {
         setLoading(true);
         setError(null);
         try {
-            const data = await catalogApi.getBooks(newFilters, newPage, pagination.limit);
-            const booksList = Array.isArray(data) ? data : data.data || [];
+            const response = await catalogApi.getBooks(newFilters, newPage, pagination.limit);
+            const booksList = response.data || [];
             setBooks(booksList);
             setPagination({
-                page: data.page || newPage,
-                limit: data.limit || pagination.limit,
-                total: data.total ?? (Array.isArray(data) ? booksList.length : data.data?.length ?? 0),
+                page: response.pagination?.page || newPage,
+                limit: response.pagination?.limit || pagination.limit,
+                total: response.pagination?.total || 0,
             });
         } catch (fetchError) {
             setError(fetchError.response?.data?.message || fetchError.message || 'Error al cargar libros');

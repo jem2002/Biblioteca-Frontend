@@ -173,7 +173,7 @@ export default function BookForm({ book, onClose, onSave, loading }) {
                         <button
                             type="submit"
                             disabled={loading}
-                            className="inline-flex items-center justify-center rounded-full bg-university-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-university-700 disabled:cursor-not-allowed disabled:opacity-60"
+                            className="inline-flex items-center justify-center rounded-full bg-university-600 px-6 py-3 text-sm font-semibold text-slate-50 transition hover:bg-university-700 disabled:cursor-not-allowed disabled:opacity-60"
                         >
                             {loading ? 'Guardando...' : book ? 'Guardar cambios' : 'Crear libro'}
                         </button>

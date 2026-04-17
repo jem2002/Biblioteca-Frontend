@@ -33,7 +33,7 @@ export default function BookCard({ book, onEdit, onDelete, currentRoles }) {
                     {onEdit && (
                         <button
                             onClick={() => onEdit(book)}
-                            className="rounded-full bg-university-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-university-700"
+                            className="rounded-full bg-university-600 px-4 py-2 text-sm font-semibold text-slate-50 transition hover:bg-university-700"
                         >
                             Editar
                         </button>
